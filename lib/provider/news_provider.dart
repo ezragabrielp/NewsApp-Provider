@@ -2,10 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart';
-import 'package:my_news_provider/models/news_model.dart';
 
 class NewsData with ChangeNotifier {
-  List<NewsModel> newslist = [];
   Map<String, dynamic> _map = {};
   bool _error = false;
   String _errorMessage = '';
