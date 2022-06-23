@@ -16,6 +16,7 @@ class NewsCard extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) => NewsPage(
                           map: map,
+                          selectedUrl: '${map['url']}',
                         )));
           },
           child: Card(
