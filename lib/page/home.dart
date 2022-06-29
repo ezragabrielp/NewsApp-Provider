@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_news_provider/news_card.dart';
+import 'package:my_news_provider/widget/news_card.dart';
 import 'package:my_news_provider/provider/news_provider.dart';
 import 'package:provider/provider.dart';
 

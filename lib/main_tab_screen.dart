@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:my_news_provider/page/category.dart';
 import 'package:my_news_provider/page/home.dart';
 import 'package:my_news_provider/provider/news_provider.dart';
 import 'package:provider/provider.dart';
@@ -18,6 +17,7 @@ class _MainTabScreenState extends State<MainTabScreen> {
 
   List<Widget> body = <Widget>[
     const Homescreen(),
+    const Category(),
   ];
 
   DateTime? currentBackPressTime;
@@ -60,7 +60,7 @@ class _MainTabScreenState extends State<MainTabScreen> {
                     const BottomNavigationBarItem(
                         icon: Icon(Icons.home), label: 'Home'),
                     const BottomNavigationBarItem(
-                        icon: Icon(Icons.category), label: 'TBA'),
+                        icon: Icon(Icons.category), label: 'Category'),
                     const BottomNavigationBarItem(
                         icon: Icon(Icons.person), label: 'TBA')
                   ]),

@@ -24,12 +24,18 @@ class NewsCard extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.all(10),
               child: Stack(children: [
-                Image.network(
-                  '${map['urlToImage']}',
-                  fit: BoxFit.contain,
-                ),
+                // ignore: unnecessary_null_comparison
+                '${map['urlToImage']}' != null
+                    ? Image.network(
+                        '${map['urlToImage']}',
+                        fit: BoxFit.contain,
+                      )
+                    : Image.network(
+                        "https://us.123rf.com/450wm/pavelstasevich/pavelstasevich1811/pavelstasevich181101028/112815904-no-image-available-icon-flat-vector-illustration.jpg?ver=6",
+                        fit: BoxFit.contain,
+                      ),
                 Text(
-                  '${map['title']}',
+                  map['title'] == null ? "Anon" : '${map['title']}',
                   style: const TextStyle(
                       fontSize: 16,
                       color: Colors.white,
